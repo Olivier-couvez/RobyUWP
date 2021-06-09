@@ -8,7 +8,33 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
 
-    </Grid>
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="1" Text="{Binding robot.AdrTCP}" Width="200" Height="100"/>
+
+            <TextBlock Grid.Row="2" Text="{Binding robot.Port}" Width="200" Height="100"/>
+
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Content="Valider"  Command="{Binding ValiderCoureur}" Grid.Column="0"/>
+                <Button Content="Annuler"  Command="{Binding AnnulerCoureur}" Grid.Column="1"/>
+            </Grid>
+
+        </Grid>
+
 </Page>

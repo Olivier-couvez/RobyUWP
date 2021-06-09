@@ -19,7 +19,6 @@ namespace RobyUWP.Viewmodels
         public Command QuitterRoby { get; set; }
         public ICommand ConfigurerRoby { get; set; }
         public ICommand PiloterRoby { get; set; }
-        public Command moi;
 
         public MainPageViewModel()
         {

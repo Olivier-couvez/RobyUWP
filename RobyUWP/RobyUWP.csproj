@@ -120,6 +120,8 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Command.cs" />
+    <Compile Include="Models\Robot.cs" />
+    <Compile Include="Viewmodels\ConfigurerViewModel.cs" />
     <Compile Include="Viewmodels\MainPageViewModel.cs" />
     <Compile Include="Views\Configurer.xaml.cs">
       <DependentUpon>Configurer.xaml</DependentUpon>
