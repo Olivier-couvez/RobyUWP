@@ -1,0 +1,31 @@
+﻿<Page
+    x:Class="RobyUWP.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RobyUWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+
+        <StackPanel x:Name="stack_panel1" 
+        Orientation="Vertical">
+            <Border Background="Blue">
+            <TextBlock Text="Roby" FontFamily="Century Gothic" Foreground="Aqua" FontSize="48"  FontWeight="Bold" HorizontalTextAlignment="Center" Width="auto"/>
+            </Border>
+            <Border Background="red">
+                <TextBlock Text="" FontFamily="Century Gothic" Foreground="Aqua" FontSize="36"  FontWeight="Bold" HorizontalTextAlignment="Center" Width="auto"/>
+            </Border>
+            <Border Background="Black">
+                <TextBlock Text="" FontFamily="Century Gothic" Foreground="Aqua" FontSize="36"  FontWeight="Bold" HorizontalTextAlignment="Center" Width="auto"/>
+            </Border>
+            <Button x:Name="Configurer" Command="{Binding ConfigurerRoby}" Content="Configurer" Width="200" Height="75" HorizontalAlignment="Center" FontWeight="Bold" FontFamily="Century Gothic" FontSize="18"></Button>
+            <Button x:Name="Piloter" Command="{Binding PiloterRoby}" Content="Piloter" Width="200" Height="75" HorizontalAlignment="Center" FontFamily="Century Gothic" FontSize="18" FontWeight="Bold"></Button>
+        </StackPanel>
+        <Button x:Name="Quitter" HorizontalAlignment="Center" Command="{Binding QuitterRoby}">
+            <Image Source="Assets/stop_s.png" Width="200" Height="200" />
+        </Button>
+    </Grid>
+</Page>
