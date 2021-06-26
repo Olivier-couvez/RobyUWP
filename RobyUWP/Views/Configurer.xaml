@@ -8,33 +8,32 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
 
-            <Grid Grid.Row="0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Margin="10,-5,-10,5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
 
-            <TextBlock Grid.Row="1" Text="{Binding robot.AdrTCP}" Width="200" Height="100"/>
-
-            <TextBlock Grid.Row="2" Text="{Binding robot.Port}" Width="200" Height="100"/>
-
-            </Grid>
-
-            <Grid Grid.Row="1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Button Content="Valider"  Command="{Binding ValiderCoureur}" Grid.Column="0"/>
-                <Button Content="Annuler"  Command="{Binding AnnulerCoureur}" Grid.Column="1"/>
-            </Grid>
+            <TextBox BorderBrush="Aqua" Background="Gray" Grid.Column="0" HorizontalAlignment="Left" FontFamily="Century Gothic" FontSize="20" Text="{Binding Path=AdrTCP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="600" Height="100" Foreground="Black" Margin="0,12,0,15" />
+            <TextBox BorderBrush="Aqua" Background="Gray" Grid.Column="1" HorizontalAlignment="Left" FontFamily="Century Gothic" FontSize="20" Text="{Binding Path=Port, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="600" Height="100" Foreground="Black"  Margin="120,12,0,15" />
 
         </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Content="Valider" HorizontalAlignment="Left" FontFamily="Century Gothic" FontSize="24" Command="{Binding Valider}" Grid.Column="0"/>
+            <Button Content="Quitter" HorizontalAlignment="Right" FontFamily="Century Gothic" FontSize="24"  Command="{Binding Quitter}" Grid.Column="1"/>
+        </Grid>
+
+    </Grid>
 
 </Page>

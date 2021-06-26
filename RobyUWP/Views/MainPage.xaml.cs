@@ -1,4 +1,5 @@
 ﻿using RobyUWP.Viewmodels;
+using RobyUWP.Views;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -26,7 +27,7 @@ namespace RobyUWP
         public MainPage()
         {
             this.InitializeComponent();
-            DataContext = new MainPageViewModel();
+            DataContext = new MainPageViewModel(Frame);
         }
     }
 }
